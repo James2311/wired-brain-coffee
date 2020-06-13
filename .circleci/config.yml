@@ -1,8 +1,4 @@
  version: 2.1
-
- orbs:
-  win: circleci/windows@2.2.0
-
  jobs:
    build:
     docker:
@@ -11,4 +7,10 @@
     
      steps:
        - checkout
-       - run: dotnet build
+       - run: 
+        name: Greeting
+        command: echo Hello, world.
+        
+   -run:
+     name: Print the Current Time
+     command: date
