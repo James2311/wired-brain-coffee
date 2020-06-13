@@ -1,16 +1,15 @@
- version: 2
- jobs:
-   build:
+version: 2.1
+jobs:
+  build:
     docker:
-      - image: circleci/ruby:2.4.1-node-browsers
-    
-     steps:
-       - checkout
-       
-      - run: 
-        name: Greeting
-        command: echo Hello, world.
-        
-     -run:
-       name: Print the Current Time
-       command: date
+      - image: circleci/ruby:2.6.3-node-browsers
+
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
