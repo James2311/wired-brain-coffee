@@ -5,9 +5,7 @@
 
  jobs:
    build:
-    docker:
-      -image: circleci/ruby:2.4.1-node-browsers
-     #executor: win/default     
+     executor: win/default     
     
      steps:
        - checkout
