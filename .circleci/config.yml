@@ -1,0 +1,14 @@
+ version: 2.1
+
+ orbs:
+  win: circleci/windows@2.2.0
+
+ jobs:
+   build:
+    docker:
+      -image: circleci/ruby:2.4.1-node-browsers
+     #executor: win/default     
+    
+     steps:
+       - checkout
+       - run: dotnet build
